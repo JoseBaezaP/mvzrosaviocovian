@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'ItaliannoCustom';
+  src: url('../assets/fonts/Italianno-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.italianno-regular {
+  font-family: "ItaliannoCustom", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .container-custom {
   width: 100%;
   @media (width >= 40rem) {
@@ -17,10 +32,4 @@
   @media (width >= 96rem) {
     max-width: 86rem;
   }
-}
-
-.italianno-regular {
-  font-family: "Italianno", cursive;
-  font-weight: 400;
-  font-style: normal;
 }
