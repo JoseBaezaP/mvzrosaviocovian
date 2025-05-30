@@ -6,14 +6,21 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.8.0",
     "tailwindcss": "^4.1.8"
   },
+  "homepage": "https://josebaezap.github.io/mvzrosaviocovian.github.io",
   "engines": {
     "node": "v24.0.2",
     "npm": "11.3.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
