@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import chuck from "../../assets/chuck.png";
+import mail from "../../assets/mail.svg";
+import instagram from "../../assets/instagram.svg";
+import facebook from "../../assets/facebook.svg";
+import whatsapp from "../../assets/whatsapp.svg";
+---
+
+<footer class="mt-8 bg-teal-500 h-20">
+  <div class="container-custom mx-auto flex justify-between">
+    <div class="text-left">
+      <Image
+        src={chuck}
+        alt="Rosario Covian"
+        class="h-full object-cover"
+        height={80}
+      />
+    </div>
+    <div class="max-md:pr-5">
+      <p class="text-white text-right">Contactame</p>
+      <div class="flex gap-4 mt-2"> 
+        <Image src={mail} alt="mail" />
+        <Image src={instagram} alt="mail" />
+        <Image src={facebook} alt="mail" />
+        <Image src={whatsapp} alt="mail" />
+      </div>
+    </div>
+  </div>
+</footer>

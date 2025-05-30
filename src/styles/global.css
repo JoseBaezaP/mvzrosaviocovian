@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.container-custom {
+  width: 100%;
+  @media (width >= 40rem) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 54rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 70rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 86rem;
+  }
+}
+
+.italianno-regular {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

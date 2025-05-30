@@ -1,0 +1,33 @@
+---
+import Title from "./atom/Title.astro";
+import { Image } from "astro:assets";
+import aboutme from "../assets/SobreMi.jpeg";
+---
+
+<div class="my-8 mx-auto container-custom">
+  <Title customClass="text-center mb-8">¿Quien soy?</Title>
+  <div
+    class="flex flex-col-reverse md:flex-row items-center justify-between gap-8 max-md:px-4"
+  >
+    <div class="md:w-1/2">
+      Hola, soy Rosario Covian, veterinaria con más de 10 años de experiencia.
+      Me especializo en dermatología y heridas, y ofrezco atención veterinaria a
+      domicilio y consultas virtuales. Mi pasión es cuidar de tus mascotas y
+      asegurarme de que reciban el mejor tratamiento posible, sin importar dónde
+      te encuentres. Estoy aquí para ayudarte a mantener a tu mascota saludable
+      y feliz.
+      <p class="mt-4">
+        Si tienes alguna pregunta o necesitas asistencia, no dudes en
+        contactarme. Estoy aquí para ti y tu mascota.
+      </p>
+    </div>
+    <div class="max-md:w-2/3">
+      <Image
+        src={aboutme}
+        alt="Rosario Covian"
+        height={620}
+        class="rounded-2xl object-cover"
+      />
+    </div>
+  </div>
+</div>

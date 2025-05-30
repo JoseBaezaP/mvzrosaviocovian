@@ -1,0 +1,33 @@
+---
+import rosario from "../assets/PerfilRosario.png";
+import { Image } from "astro:assets";
+import Title from "./atom/Title.astro";
+import TwoColumns from "./atom/TwoColumns.astro";
+import Card from "./atom/Card.astro";
+---
+
+<div class="bg-teal-500">
+  <TwoColumns>
+    <div class="flex items-center justify-center">
+      <Image
+        src={rosario}
+        alt="Rosario Covian"
+        style={{ maskImage: "linear-gradient(black 80%, transparent)" }}
+        class="object-cover max-md:w-1/2"
+        height={760}
+      />
+    </div>
+    <Card>
+      <Title>¡Bienvenidos!</Title>
+      <Title>Soy tu veterinaria de confianza 🐶</Title>
+      <p class="mb-4">
+        Atención veterinaria a domicilio y desde cualquier lugar del mundo de
+        forma virtual para que tu mascota reciba el mejor cuidado sin salir de
+        casa.
+      </p>
+      <p class="text-lg text-gray-400 mb-6">
+        Dermatologa | Especialista en heridas | Medicina General
+      </p>
+    </Card>
+  </TwoColumns>
+</div>

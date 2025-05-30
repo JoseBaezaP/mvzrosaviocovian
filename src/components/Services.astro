@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Title from "./atom/Title.astro";
+import { getCollection } from "astro:content";
+
+const services = await getCollection("services");
+---
+
+<div class="my-8 mx-auto container-custom">
+  <Title customClass="text-center mb-8">Servicios</Title>
+  <div class="grid gap-5 justify-items-center">
+    {
+      services.map((item) => (
+        <div class="rounded-lg inset-shadow-sm shadow-md flex justify-between max-md:grid max-md:w-xs">
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2 text-teal-600">
+              {item.data.title}
+            </h2>
+            <p class="mb-4 text-teal-800">{item.data.description}</p>
+            <a
+              class="bg-teal-500 text-white rounded-full p-2"
+              href={`https://wa.me/+528135075380?text=Hola, me gustaría solicitar el servicio de ${item.data.title}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicitar Cita
+            </a>
+          </div>
+          {item.data.image && (
+            <Image
+              src={item.data.image}
+              alt={item.data.title}
+              class="rounded-lg md:w-1/2 max-md:mx-auto"
+              height={200}
+              width={500}
+            />
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>
