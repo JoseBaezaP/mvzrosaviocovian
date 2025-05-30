@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-
+import Title from "./atom/Title.astro";
 import { getCollection } from "astro:content";
 
 const educationCollection = await getCollection("education");
@@ -11,10 +11,13 @@ const education = educationCollection.sort((a, b) => {
 ---
 
 <div class="mx-auto container-custom my-8">
-  <div class="flex flex-wrap justify-around gap-8 max-md:px-4">
+  <Title customClass="text-center mb-8">Cursos</Title>
+  <div
+    class="grid grid-cols-2 md:flex md:flex-wrap md:justify-between gap-8 max-md:px-4"
+  >
     {
       education.map((item) => (
-        <article class="bg-teal-500 p-6 rounded-lg shadow-md text-white w-xs">
+        <article class="bg-teal-500 p-6 rounded-lg shadow-md text-white md:w-xs">
           {item.data.image && (
             <Image
               src={item.data.image}
@@ -24,7 +27,7 @@ const education = educationCollection.sort((a, b) => {
               height={200}
             />
           )}
-          <footer>
+          <footer class="text-center">
             <h2 class="text-xl font-bold mb-2">{item.data.title}</h2>
             <p class="text-gray-100 mb-4">
               {item.data.year} | {item.data.school}

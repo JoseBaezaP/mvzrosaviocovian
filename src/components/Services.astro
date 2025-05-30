@@ -11,7 +11,7 @@ const services = await getCollection("services");
   <div class="grid gap-5 justify-items-center">
     {
       services.map((item) => (
-        <div class="rounded-lg inset-shadow-sm shadow-md flex justify-between max-md:grid max-md:w-xs">
+        <div class="rounded-lg inset-shadow-sm shadow-md flex justify-between max-md:grid max-md:w-xs w-full">
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-teal-600">
               {item.data.title}
