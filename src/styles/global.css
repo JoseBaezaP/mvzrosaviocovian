@@ -3,7 +3,7 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
   font-family: 'ItaliannoCustom';
-  src: url('../assets/fonts/Italianno-Regular.ttf') format('truetype');
+  src: url('/fonts/Italianno-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,6 +13,7 @@
   font-family: "ItaliannoCustom", cursive;
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 .container-custom {
