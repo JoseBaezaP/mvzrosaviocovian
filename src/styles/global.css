@@ -34,3 +34,7 @@
     max-width: 86rem;
   }
 }
+
+h2 {
+    font-size: clamp(1rem, 2vw,1.3rem);
+}
